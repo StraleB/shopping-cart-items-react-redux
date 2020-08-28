@@ -1,38 +1,142 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;0,700;0,900;1,400;1,500;1,700&display=swap');
+*{
+  padding:0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{background:#e8ded2;}
+
+header{
+  background:#5eaaa8;
+  height: 90px;
+  position: relative;
+  font-family: 'Roboto', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+h2{margin:-0.3em;}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav{
+  position: absolute;
+  top: -1em;
+  right: 0;
+  left: 0;
+  z-index: 2;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding:50px 60px 0 60px;
+  color: #e8ded2;
+}
+
+nav li{
+  list-style:none;
+  display: inline-block;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+li a{
+  padding: 5px;
+  text-decoration:none;
+  color: #e8ded2;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.cart ion-icon{
+  vertical-align: bottom;
+  font-size:20px;
+  padding-right: 5px;
+}
+
+.itemContainer{
+  margin: 2em 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+}
+
+section{
+  width: 14em;
+  text-align: left;
+  cursor: pointer;
+  overflow:hidden;
+}
+
+section h5{
+  padding:0.5em;
+}
+
+section h3{
+  padding:0.5em 0.8em;
+  width: 5em;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  background:#056676;
+  border-radius: 0.4em;
+}
+
+img[alt="article-item"]{
+  height: 12em;
+}
+
+.add-to-cart{
+  position: absolute;
+  width: 4em;
+  background:#056676;
   color: white;
+  width: 11.3em;
+  transition: all 0.3s ease-in-out;
+  text-align:center;
+  opacity: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.cart2, .cart3, .cart4{
+  margin:0em -11.3em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+
+.article1:hover .cart1,
+.article2:hover .cart2,
+.article3:hover .cart3,
+.article4:hover .cart4{
+  top:120px;
+  opacity: 1;
+  padding: 10px;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 768px) {
+  section{
+    margin-top:1em
   }
-  to {
-    transform: rotate(360deg);
+
+  .cart2, .cart3{
+    margin:1em -11.3em
+  }
+  
+  .cart4{
+    margin:21em -11.3em;
+  }
+  
+}
+
+@media only screen and (max-width: 414px) {
+  section{
+    margin-top:2em
+  }
+
+  .cart2{
+    margin:22em -11.3em
+  }
+
+   .cart3{
+    margin:44.1em -11.3em
+  }
+  
+  .cart4{
+    margin:64.3em -11.3em;
   }
 }
